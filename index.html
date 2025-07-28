@@ -3,20 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Javier Pachano Hello | Design Portfolio</title>
+  <title>Javier Pachano | Design Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="logo">Javier Pachano</span>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
   <header>
-    <h1>Design with Purpose, Create with Impact</h1>
+    <h1>
+      Design with <span class="hover-change" data-alt="People">Purpose</span>, 
+      Create with <span class="hover-change" data-alt="Creativity">Impact</span>
+    </h1>
     <p>Javier Pachano – UX/UI & Multimedia Designer</p>
   </header>
 
   <section class="hero-section">
     <h2>Hi, I’m Javier</h2>
     <p>Freelance product designer helping early stage startups grow through a holistic approach to UX.</p>
-    <a href="#contact">Let's work together</a>
+    <a href="#contact" class="cta-button">Let's work together</a>
   </section>
 
   <section class="projects">
@@ -56,5 +72,23 @@
   <footer>
     <p>&copy; 2025 Javier Pachano. All rights reserved. | Designed with care in Canada.</p>
   </footer>
+
+  <script>
+    // Interactive hover text replacement
+    document.querySelectorAll('.hover-change').forEach(span => {
+      const original = span.textContent;
+      const alternate = span.dataset.alt;
+
+      span.addEventListener('mouseenter', () => {
+        span.textContent = alternate;
+        span.classList.add('hovered');
+      });
+
+      span.addEventListener('mouseleave', () => {
+        span.textContent = original;
+        span.classList.remove('hovered');
+      });
+    });
+  </script>
 </body>
 </html>
