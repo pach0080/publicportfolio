@@ -5,37 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Javier Pachano | Design Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-left">
-      <span class="logo">Javier Pachano</span>
-    </div>
-    <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#projects">Work</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#blog">Blog</a></li>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 py-3">
+    <a class="navbar-brand fw-bold" href="#">Javier Pachano</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Work</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#blog">Blog</a>
+        </li>
       </ul>
     </div>
   </nav>
+
   <header>
-    <h1>
-      Design with <span class="hover-change" data-alt="People">Purpose</span>, 
-      Create with <span class="hover-change" data-alt="Creativity">Impact</span>
-    </h1>
+    <h1>Design with <span class="hover-change" data-alt="People">Purpose</span>, Create with <span class="hover-change" data-alt="Creativity">Impact</span></h1>
     <p>Javier Pachano – UX/UI & Multimedia Designer</p>
   </header>
 
   <section class="hero-section">
     <h2>Hi, I’m Javier</h2>
     <p>Freelance product designer helping early stage startups grow through a holistic approach to UX.</p>
-    <a href="#contact" class="cta-button">Let's work together</a>
+    <a href="#contact">Let's work together</a>
   </section>
 
-  <section class="projects">
+  <section id="projects" class="projects">
     <div class="project">
       <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Project 1">
       <div class="project-content">
@@ -73,22 +81,6 @@
     <p>&copy; 2025 Javier Pachano. All rights reserved. | Designed with care in Canada.</p>
   </footer>
 
-  <script>
-    // Interactive hover text replacement
-    document.querySelectorAll('.hover-change').forEach(span => {
-      const original = span.textContent;
-      const alternate = span.dataset.alt;
-
-      span.addEventListener('mouseenter', () => {
-        span.textContent = alternate;
-        span.classList.add('hovered');
-      });
-
-      span.addEventListener('mouseleave', () => {
-        span.textContent = original;
-        span.classList.remove('hovered');
-      });
-    });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
